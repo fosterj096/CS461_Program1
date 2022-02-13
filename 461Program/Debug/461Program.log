@@ -1,0 +1,42 @@
+﻿  461Program.cpp
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(29,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(317,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(317,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(318,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(318,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(319,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(319,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(320,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(320,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(321,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(321,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(322,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(322,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(323,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(323,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(324,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(324,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(325,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(325,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(326,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(326,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(327,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(327,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(328,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(328,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(329,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(329,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(330,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(330,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(331,39): warning C4305: '=': truncation from 'int' to 'char'
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(331,35): warning C4309: '=': truncation of constant value
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(335,91): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(335,100): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(335,109): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,17): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,26): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,35): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,65): warning C4804: '<': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,74): warning C4804: '<': unsafe use of type 'bool' in operation
+C:\Users\foste\source\repos\461Program\461Program\461Program.cpp(363,83): warning C4804: '<': unsafe use of type 'bool' in operation
+  461Program.vcxproj -> C:\Users\foste\source\repos\461Program\Debug\461Program.exe

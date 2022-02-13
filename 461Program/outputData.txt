@@ -1,0 +1,9 @@
+This is the text file containing the data for the poker simulation.
+This is a simple summary of the entire process and how often each hand won. More detailed data is in the CSV file.
+The main static hand won approximately 0% of the time!
+The first hand won approximately 11.2628% of the time!
+The second hand won approximately 12.388% of the time!
+The third hand won approximately 10.85% of the time!
+The fourth hand won approximately 14.7104% of the time!
+The fifth hand won approximately 11.8444% of the time!
+The endless black abyss won approximately 2499.39%... no good.
