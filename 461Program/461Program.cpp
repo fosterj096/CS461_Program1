@@ -44,6 +44,7 @@ int main()
         "D1", "D2", "D3", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "DJ", "DQ", "DK",
         "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "SJ", "SQ", "SK",
         "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "CJ", "CQ", "CK" };
+    
     //string arrays used to hold the cards
     string staticHand[5] = { "0",  "0",  "0",  "0",  "0" }; //the hand that doesn't change
     string hand1[5] = { "0",  "0",  "0",  "0",  "0" };
@@ -52,25 +53,20 @@ int main()
     string hand4[5] = { "0",  "0",  "0",  "0",  "0" };
     string hand5[5] = { "0",  "0",  "0",  "0",  "0" };
 
-
     loadOneHand(hand1, mainDeck);
     handValueCalc(hand1);
-
-
     ofstream myCSVFile;
+    
     myCSVFile.open("outputData.csv");
     myCSVFile << "The hands correspond to a numerical value. 1 =  One pair, 2 = 2 Pair, 3 = Three of a Kind, etc. \n";
 
     //Main Game Playing loop
-
     for (int i = 0; i < 50; i++)
     {
         loadOneHand(staticHand, mainDeck);
         int staticHandValue = handValueCalc(staticHand);
-  
         for (int i = 0; i < 500; i++)
         {
-            
             loadOneHand(hand1, mainDeck);
             loadOneHand(hand2, mainDeck);
             loadOneHand(hand3, mainDeck);
@@ -91,38 +87,30 @@ int main()
             myCSVFile << "Hand 4: " << hand4Val << endl;
             myCSVFile << "Hand 5: " << hand5Val << endl;
 
-
-
             if ((staticHandValue > hand1Val) && (staticHandValue > hand2Val) && (staticHandValue > hand3Val) && (staticHandValue > hand4Val) && (staticHandValue > hand5Val))
             {
                 mainHandWin += 1;
             }
-
             if ((hand1Val > staticHandValue) && (hand1Val > hand2Val) && (hand1Val > hand3Val) && (hand1Val > hand4Val) && (hand1Val > hand5Val))
             {
                 hand1Win += 1;
             }
-
             if ((hand2Val > staticHandValue) && (hand2Val > hand1Val) && (hand2Val > hand3Val) && (hand2Val > hand4Val) && (hand2Val > hand5Val))
             {
                 hand2Win += 1;
             }
-
             if ((hand3Val > staticHandValue) && (hand3Val > hand1Val) && (hand3Val > hand2Val) && (hand3Val > hand4Val) && (hand3Val > hand5Val))
             {
                 hand3Win += 1;
             }
-
             if ((hand4Val > staticHandValue) && (hand4Val > hand1Val) && (hand4Val > hand2Val) && (hand4Val > hand3Val) && (hand4Val > hand5Val))
             {
                 hand4Win += 1;
             }
-
             if ((hand5Val > staticHandValue) && (hand5Val > hand1Val) && (hand5Val > hand2Val) && (hand5Val > hand3Val) && (hand5Val > hand4Val))
             {
                 hand5Win += 1;
             }
-
             if (hand1Val == hand2Val)
             {
                 if (returnHighestCard(hand1) > returnHighestCard(hand2))
@@ -133,7 +121,6 @@ int main()
                     hand2Win++;
                 }
             }
-
             if (hand1Val == hand3Val)
             {
                 if (returnHighestCard(hand1) > returnHighestCard(hand3))
@@ -144,7 +131,6 @@ int main()
                     hand3Win++;
                 }
             }
-
             if (hand1Val == hand4Val)
             {
                 if (returnHighestCard(hand1) > returnHighestCard(hand4))
@@ -155,7 +141,6 @@ int main()
                     hand4Win++;
                 }
             }
-
             if (hand1Val == hand5Val)
             {
                 if (returnHighestCard(hand1) > returnHighestCard(hand5))
@@ -166,7 +151,6 @@ int main()
                     hand5Win++;
                 }
             }
-
             if (hand2Val == hand3Val)
             {
                 if (returnHighestCard(hand2) > returnHighestCard(hand3))
@@ -177,7 +161,6 @@ int main()
                     hand3Win++;
                 }
             }
-
             if (hand4Val == hand2Val)
             {
                 if (returnHighestCard(hand2) > returnHighestCard(hand4))
@@ -188,7 +171,6 @@ int main()
                     hand4Win++;
                 }
             }
-
             if (hand5Val == hand2Val)
             {
                 if (returnHighestCard(hand2) > returnHighestCard(hand5))
@@ -199,7 +181,6 @@ int main()
                     hand5Win++;
                 }
             }
-
             if (hand3Val == hand4Val)
             {
                 if (returnHighestCard(hand3) > returnHighestCard(hand4))
@@ -210,7 +191,6 @@ int main()
                     hand4Win++;
                 }
             }
-
             if (hand4Val == hand5Val)
             {
                 if (returnHighestCard(hand4) > returnHighestCard(hand5))
@@ -221,23 +201,19 @@ int main()
                     hand5Win++;
                 }
             }
-
-
+            
             emptyHand(hand1);
             emptyHand(hand2);
             emptyHand(hand3);
             emptyHand(hand4);
             emptyHand(hand5);
-
             resetDeck(mainDeck, copymainDeck);
-
             roundCounter++;
         }
     }
 
     //Text File and CSV Outputs
     ofstream myTextFile;
-
     myTextFile.open("outputData.txt");
     myTextFile << "This is the text file containing the data for the poker simulation.\n";
     myTextFile << "This is a simple summary of the entire process and how often each hand won. More detailed data is in the CSV file.\n";
@@ -247,14 +223,10 @@ int main()
     myTextFile << "The third hand won approximately " << (hand3Win / 2500) << "% of the time!\n";
     myTextFile << "The fourth hand won approximately " << (hand4Win / 2500) << "% of the time!\n";
     myTextFile << "The fifth hand won approximately " << (hand5Win / 2500) << "% of the time!\n";
-
     myTextFile.close();
     myCSVFile.close();
-
-
-
-
 };
+
 //Reset Hand
 void emptyHand(string array[]){
     for (int i = 0; i < 5; i++) {
@@ -274,7 +246,6 @@ void loadOneHand(string currHand[], string mainDeck[]) {
         }
     }
 }
-
 //Reset deck to default
 void resetDeck(string mainDeck[], string copymainDeck[]) {
     //mainDeck[52] = copymainDeck[52];
@@ -283,7 +254,6 @@ void resetDeck(string mainDeck[], string copymainDeck[]) {
         mainDeck[i] = copymainDeck[i];
     }
 }
-
 //Pair, Two Pair, Three Pair, Three of a Kind, Straight(any 5 in order), Flush(5 same suit), Full House(3 kind, 1 pair), 4 of a kind, straight flush(straight + flush)
 int handValueCalc(string currHand[]) {
    
@@ -298,9 +268,7 @@ int handValueCalc(string currHand[]) {
     string card3 = currHand[2];
     string card4 = currHand[3];
     string card5 = currHand[4];
-
     //changing from char to int for ease of calculation
-
     char suit1 = card1[0];
     char value1 = card1[1];
     char suit2 = card2[0];
@@ -311,7 +279,6 @@ int handValueCalc(string currHand[]) {
     char value4 = card4[1];
     char suit5 = card5[0];
     char value5 = card5[1];
-
     //Convoluted conversion from letter char to number char for comparision
     if (value1 == 'J') { value1 = '11'; };
     if (value1 == 'Q') { value1 = '12'; };
@@ -328,69 +295,55 @@ int handValueCalc(string currHand[]) {
     if (value5 == 'J') { value5 = '11'; };
     if (value5 == 'Q') { value5 = '12'; };
     if (value5 == 'K') { value5 = '13'; }
-
-
     //straight flush
     if ((suit1 == suit2 && suit2 == suit3 && suit3 == suit4 && suit4 == suit5) && (value1 > value2 > value3 > value4 > value5))
     {
         handValue = 8;
     }
-
-
     //4 of a kind
     if ((value1 == value2 == value3 == value4) || (value2 == value3 == value4 == value5) || (value1 == value2 == value3 == value5) || (value1 == value2 == value4 == value5)
         || (value1 == value3 == value4 == value5))
     {
         handValue = 7;
     }
-
-
     //full house
     if ((value1 == value2 == value3) || (value1 == value2 == value4) || (value1 == value2 == value5) || (value1 == value3 == value4) || (value1 == value4 == value5) || (value2 == value3 == value4) || (value2 == value3 == value5) || (value2 == value3 == value4) || (value3 == value4 == value5) &&
         (value1 == value2 || value1 == value3 || value1 == value4 || value1 == value5 || value2 == value3 || value2 == value4 || value2 == value5 || value3 == value4 || value3 == value5 || value4 == value5)) {
         handValue = 6;
     }
-
     //flush
     if (suit1 == suit2 && suit2 == suit3 && suit3 == suit4 && suit4 == suit5)
     {
         handValue = 5;
     }
-
-
     //straight
     if ((value1 > value2 > value3 > value4 > value5) || (value1 < value2 < value3 < value4 < value5))
     {
         handValue = 4;
     }
- 
-
     //three of a kind
     if (value1==value2==value3 || value1==value2==value4 || value1==value2==value5 || value1==value3==value4 || value1==value4==value5 || value2==value3==value4 || value2==value3==value5 || value2==value3==value4 || value3==value4==value5)
         {
             handValue = 3;
         }
-
     //two pair
     if ((value1 == value2 && value3 == value4) || (value1 == value2 && value4 == value5) || (value2 == value3 && value1 == value4) || (value2 == value4 && value1 == value3))
     {
         handValue = 2;
     }
-
     //pair
     if (value1 == value2 || value1 == value3 || value1 == value4 || value1==value5 || value2==value3 || value2==value4 || value2==value5 || value3==value4 || value3==value5 || value4==value5)
     {
         handValue = 1;
     }
-
     return handValue;
 }
 
 int returnHighestCard(string currHand[]) {
 
     char highest = '0';
-
     string cardRead = "";
+    
     for (int i = 0; i < 5; i++) {
         cardRead = cardRead + currHand[i];
     }
@@ -421,6 +374,5 @@ int returnHighestCard(string currHand[]) {
             highest = allValues[i];
         }
     }
-
     return highest;
 }
